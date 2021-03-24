@@ -1,0 +1,29 @@
+{
+  "name" : "moukail/mailgun-mail-status-bundle",
+  "description" : "Implements mailgun mail status bundle",
+  "type" : "symfony-bundle",
+  "authors" : [{
+    "name" : "Ismail",
+    "email" : "ismail@datamatch.nl"
+  }],
+  "license" : [
+    "MIT"
+  ],
+  "require" : {
+    "php": "^7.4|^8.0",
+    "symfony/framework-bundle": "^4.0|^5.0",
+    "moukail/common-token": "1.0.*"
+  },
+  "require-dev": {
+    "doctrine/doctrine-bundle": "~1.4|~2.0",
+    "doctrine/orm": "^2.4.8"
+  },
+  "config": {
+    "bin-dir": "bin"
+  },
+  "autoload": {
+    "psr-4": {
+      "Moukail\\MailgunMailStatusBundle\\": "src/"
+    }
+  }
+}

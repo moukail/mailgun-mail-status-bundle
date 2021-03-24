@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="Moukail\MailgunMailStatusBundle\Controller\MailStatusController" alias="moukail.mailgun_mail_status.mail_status_controller" />
+        <service id="moukail.mailgun_mail_status.mail_status_controller" class="Moukail\MailgunMailStatusBundle\Controller\MailStatusController" public="true" autowire="true">
+            <argument />
+            <argument />
+        </service>
+
+        <service id="Moukail\MailgunMailStatusBundle\Repository\MailStatusRepository" alias="moukail.mailgun_mail_status.mail_status_repository" />
+        <service id="moukail.mailgun_mail_status.mail_status_repository" class="Moukail\MailgunMailStatusBundle\Repository\MailStatusRepository" autowire="true">
+            <argument type="service" id="doctrine"/>
+            <tag name="doctrine.repository_service"
+                 handles="Moukail\MailgunMailStatusBundle\Repository\MailStatusRepository"/>
+        </service>
+    </services>
+</container>
