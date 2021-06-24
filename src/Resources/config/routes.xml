@@ -3,7 +3,7 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://symfony.com/schema/routing
         http://symfony.com/schema/routing/routing-1.0.xsd">
-    <route id="moukail.mailgun_mail_status.list" controller="moukail.mailgun_mail_status.mail_status_controller:list" path="/mail-status" methods="GET" />
-    <route id="moukail.mailgun_mail_status.list_month" controller="moukail.mailgun_mail_status.mail_status_controller:list_month" path="/mail-status/{month}" methods="GET" />
-    <route id="moukail.mailgun_mail_status.save" controller="moukail.mailgun_mail_status.mail_status_controller:save" path="/mail-status" methods="POST" />
+    <route id="moukail.mailgun_mail_status.list" controller="moukail.mailgun_mail_status.mail_status_controller::list" path="/mail-status" methods="GET" />
+    <route id="moukail.mailgun_mail_status.list_month" controller="moukail.mailgun_mail_status.mail_status_controller::list_month" path="/mail-status/{month}" methods="GET" />
+    <route id="moukail.mailgun_mail_status.save" controller="moukail.mailgun_mail_status.mail_status_controller::save" path="/mail-status" methods="POST" />
 </routes>
