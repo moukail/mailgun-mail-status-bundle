@@ -24,6 +24,10 @@ class MailStatusRepository extends ServiceEntityRepository
         $recipient = $eventData['recipient'];
         $event = $eventData['event'];
 
+        if ($tags == null){
+            return;
+        }
+
         $entityManager = $this->getEntityManager();
 
         $mail = $this->findOneBy(['tag' => $tags[0], 'recipient' => $recipient]);
