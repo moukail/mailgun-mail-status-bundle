@@ -2,12 +2,14 @@
 
 namespace Moukail\MailgunMailStatusBundle;
 
-use Moukail\MailgunMailStatusBundle\DependencyInjection\MoukailMailgunMailStatusExtension;
+use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
+
+use Moukail\MailgunMailStatusBundle\DependencyInjection\MoukailMailgunMailStatusExtension;
 
 class MoukailMailgunMailStatusBundle extends Bundle
 {
-    public function getContainerExtension()
+    public function getContainerExtension(): ?ExtensionInterface
     {
         if (null === $this->extension) {
             $this->extension = new MoukailMailgunMailStatusExtension();
