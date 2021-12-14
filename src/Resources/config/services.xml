@@ -4,12 +4,12 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
         <service id="Moukail\MailgunMailStatusBundle\Controller\MailStatusController" alias="moukail.mailgun_mail_status.mail_status_controller" />
-        <service id="moukail.mailgun_mail_status.mail_status_controller" class="Moukail\MailgunMailStatusBundle\Controller\MailStatusController" public="true" autowire="true">
+        <service id="moukail.mailgun_mail_status.mail_status_controller" class="Moukail\MailgunMailStatusBundle\Controller\MailStatusController" public="true">
             <call method="setContainer">
-                <argument type="service" id="Symfony\Component\DependencyInjection\ContainerInterface"/>
+                <argument type="service" id="service_container"/>
             </call>
-            <argument />
-            <argument />
+            <argument type="service" id="moukail.mailgun_mail_status.mail_status_repository"/>
+            <argument type="service" id="logger"/>
         </service>
 
         <service id="Moukail\MailgunMailStatusBundle\Repository\MailStatusRepository" alias="moukail.mailgun_mail_status.mail_status_repository" />
