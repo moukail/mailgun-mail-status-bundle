@@ -18,7 +18,7 @@ class MoukailMailgunMailStatusExtension extends Extension
         //$loader->load('services.yml');
     }
 
-    public function getAlias()
+    public function getAlias(): string
     {
         return 'moukail_mailgun_mail_status';
     }
